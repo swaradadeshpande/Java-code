@@ -1,4 +1,5 @@
 import java.util.*;
+// main class
 public class ExpenseTracker{
     public static void main(String[] args)  {
         Scanner sc = new Scanner(System.in);
@@ -62,12 +63,13 @@ public class ExpenseTracker{
     }
 }
 
+// expense class
 class Expense{
     String category;
     double amount;
     String date;
 
-    Expense(String category, double amount, String date) {
+    Expense(String category, double amount, String date) { //constructor
         this.category = category;
         this.amount = amount;
         this.date = date;
@@ -84,7 +86,7 @@ class ExpTrack {
         System.out.println("\nAdded Expense: " + category + " - ₹" + amount);
     }
 
-    public void displayExpenses()// Display expense  {
+    public void displayExpenses(){  // Display expense
         System.out.println("\n===== ALL EXPENSES =====\n");
         for(int i=0;i<expenses.size();i++)   {
             System.out.println(i + ". " + expenses.get(i));
@@ -92,7 +94,7 @@ class ExpTrack {
         }
     }
 
-    public void deleteExp(int index)// Delete Expense
+    public void deleteExp(int index) // Delete Expense
     {
         if(index >= 0 && index < expenses.size())  {
             Expense removed = expenses.remove(index);
@@ -103,7 +105,7 @@ class ExpTrack {
         }
     }
 
-    public void generateSummary() {// Generate summary
+    public void generateSummary() { // Generate summary
         HashMap<String, Double> catTotal = new HashMap<>();
         double total = 0;
 
@@ -124,7 +126,6 @@ class ExpTrack {
             System.out.println(cat + " : ₹" + catTotal.get(cat));
         }
     }
-
 
     public void monthlyReport(String month) // Monthly report
    {
