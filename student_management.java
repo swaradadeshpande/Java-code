@@ -1,7 +1,7 @@
-package prac7;
 import java.io.*;
 import java.util.*;
 
+// main class
 public class student_management {
 
     public static void main(String[] args) {
@@ -75,12 +75,14 @@ public class student_management {
         sc.close();
     }
 }
+
+// student class
 class Student {
     String name;
     int age;
     String grade;
     
-    public Student(String name, int age, String grade) {
+    public Student(String name, int age, String grade) { // constructor
         this.name = name;
         this.age = age;
         this.grade = grade;
@@ -92,6 +94,7 @@ class Student {
     }
 }
 
+// manager class
 class Manager {
     private ArrayList<Student> studentList = new ArrayList<>();
     private final String FILE_NAME = "student.txt";
@@ -116,7 +119,7 @@ class Manager {
             }
         }
     }
-
+// search method
     public void search_name(String name) {
         boolean found = false;
         for (Student s : studentList) {
@@ -146,7 +149,7 @@ class Manager {
             System.out.println("Student not found! Cannot modify.");
         }
     }
-
+// delete method
     public void delete_student(String name) {
         boolean removed = studentList.removeIf(s -> s.name.equalsIgnoreCase(name));
         if (removed) {
@@ -175,7 +178,7 @@ class Manager {
         if (!file.exists()) {
             return; // If file doesn't exist yet, just start with an empty list
         }
-        
+        // error handling try catch 
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             String line;
             while ((line = br.readLine()) != null) {
