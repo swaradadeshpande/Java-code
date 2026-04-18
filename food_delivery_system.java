@@ -3,7 +3,7 @@ int orderId;
 String foodItem;
 String cust_name;
 
-public Order(int orderId, String foodItem, String cust_name) {
+public Order(int orderId, String foodItem, String cust_name) {// constructor
    this.orderId = orderId;
    this.foodItem = foodItem;
    this.cust_name=cust_name;
