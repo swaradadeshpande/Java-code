@@ -1,5 +1,3 @@
-package p8;
-
 class Order { // order class
 int orderId;
 String foodItem;
@@ -9,7 +7,8 @@ public Order(int orderId, String foodItem, String cust_name) {
    this.orderId = orderId;
    this.foodItem = foodItem;
    this.cust_name=cust_name;
-} }
+}
+}
 
 class DeliveryAgent implements Runnable { // class delivery agent implements runnable
 String agentName;
@@ -29,7 +28,8 @@ public void run() { // run method
        System.out.println("Delivery interrupted.");
    } 
    System.out.println(agentName + " successfully delivered Order #" + assignedOrder.orderId);
-} }
+} 
+}
 
 public class food_delivery_system {
 public static void main(String[] args) {
@@ -62,5 +62,7 @@ public static void main(String[] args) {
        Thread.sleep(1000); 
    } catch (InterruptedException e) {
        e.printStackTrace();
-   } } }
+   }
+} 
+}
 
