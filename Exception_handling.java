@@ -44,7 +44,7 @@ class Library {  //library class
  // method to return
  public void returnBook(String title, int daysLate) throws BookException {
      if (daysLate < 0) {
-         throw new BookException("Error: Invalid return date! Days late cannot be negative.");
+         throw new BookException("Error: Invalid return date! Days late cannot be negative."); // throws new exception
      }
      Book b = findBook(title);
      b.isCheckedOut = false;
@@ -54,12 +54,12 @@ class Library {  //library class
      }
  }
 }
-
+// main class
 public class Exception_handling {
  public static void main(String[] args) {
      Library myLibrary = new Library(10);
      myLibrary.addBook("Java Programming");
-
+// try catch bock
      try { myLibrary.checkOutBook("Java Programming"); 
 } 
      catch (BookException e) { System.out.println(e.getMessage()); 
