@@ -1,9 +1,7 @@
-package main.java;
-
-class BookException extends Exception {
+class BookException extends Exception {  // class for exception handling
  public BookException(String message) { super(message); }
 }
-class Book {
+class Book {  // book class
  String title;
  boolean isCheckedOut;
  Book(String title) {
@@ -11,18 +9,20 @@ class Book {
      this.isCheckedOut = false;
  }
 }
-class Library {
+class Library {  //library class
  private Book[] books;
  private int bookCount;
  public Library(int capacity) {
      books = new Book[capacity];
      bookCount = 0;
  }
+ // method to add book
  public void addBook(String title) {
      if (bookCount < books.length) {
          books[bookCount++] = new Book(title);
      }
  }
+ // method to find book
  private Book findBook(String title) throws BookException {
      for (int i = 0; i < bookCount; i++) {
          if (books[i].title.equalsIgnoreCase(title)) {
@@ -31,6 +31,8 @@ class Library {
      }
      throw new BookException("Error: Book '" + title + "' not found in the library.");
  }
+
+ //method to checkout
  public void checkOutBook(String title) throws BookException {
      Book b = findBook(title);
      if (b.isCheckedOut) {
@@ -39,6 +41,7 @@ class Library {
      b.isCheckedOut = true;
      System.out.println("Book checked out successfully: " + b.title);
  }
+ // method to return
  public void returnBook(String title, int daysLate) throws BookException {
      if (daysLate < 0) {
          throw new BookException("Error: Invalid return date! Days late cannot be negative.");
