@@ -1,17 +1,19 @@
-package prac4;
 import java.util.Scanner;
+// base class vehicle
 class vehicle {
+	// data members 
 	String v_name;
 	int days;
 	int rent;
 	String model;
 	
-	vehicle(int rent, String v_name, String model, int days){
+	vehicle(int rent, String v_name, String model, int days){ // constructor
 		this.rent=rent;
 		this.v_name=v_name;
 	    this.model=model;
 	    this.days=days;
 	}
+	// member functions / methods
 	public int cal_rent() {
 		int res=rent*days;
 		return res;
@@ -23,10 +25,11 @@ class vehicle {
         System.out.println("Total Rent for " + days + " days: " + cal_rent());
 	}
 }	
+// child class car
 	class car extends vehicle{
 		int car_rent;
 		car(int rent, String v_name, String model, int days){
-		    super(rent,v_name,model,days);
+		    super(rent,v_name,model,days); // super keyword is used to inherit from base class
 	}
 		public int cal_rent() {
 			car_rent=1000;
@@ -34,7 +37,7 @@ class vehicle {
 		}
 		
 	}
-	
+// child class truck	
 	class truck extends vehicle{
 		int truck_rent;
 		truck(int rent, String v_name, String model, int days){
@@ -46,6 +49,7 @@ class vehicle {
 		}
 		
 	}
+// child class bike
 	class bike extends vehicle{
 		int bike_rent;
 		bike(int rent, String v_name, String model, int days){
@@ -57,6 +61,7 @@ class vehicle {
 		}
 		
 	}
+// main class
 public class vehicle_management_system{	
 	public static void main(String[] args) {
 		System.out.println("abc");
@@ -112,7 +117,6 @@ public class vehicle_management_system{
 	    	default:
 	    		System.out.println("Invalid choice");
 	    		break;
-	    
 	    }
 	}while(choice!=5);
 	}
