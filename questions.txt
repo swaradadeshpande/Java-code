@@ -1,0 +1,3 @@
+What is 2 + 2?,2,4,6,2
+What is the capital of France?,Berlin,Madrid,Paris,3
+Which language runs on JVM?,Python,Java,C++,2
