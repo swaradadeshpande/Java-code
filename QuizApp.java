@@ -1,13 +1,12 @@
-
 import java.io.File;
 import java.util.Scanner;
-
+// class for exception handling
 class InvalidAnswerException extends Exception {
     public InvalidAnswerException(String message) {
         super(message);
     }
 }
-
+// main class
 public class QuizApp {
     public static void main(String[] args) {
         int score = 0;
@@ -35,7 +34,7 @@ public class QuizApp {
                         throw new InvalidAnswerException("Invalid choice! Pick 1, 2, or 3.");
                     }
 
-                    int correct = Integer.parseInt(data[4]);
+                    int correct = Integer.parseInt(data[4]); // checks ans
                     if (userAnswer == correct) {
                         System.out.println("Correct!");
                         score++;
@@ -43,7 +42,7 @@ public class QuizApp {
                         System.out.println("Wrong! The correct answer was " + correct);
                     }
 
-                } catch (NumberFormatException e) {
+                } catch (NumberFormatException e) { // catch block
                     System.out.println("Input error! Please enter a number.");
                 } catch (InvalidAnswerException e) {
                     System.out.println(e.getMessage());
