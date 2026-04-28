@@ -52,10 +52,7 @@ public class QuizApp {
             System.out.println("\n--- Quiz Finished ---");
             System.out.println("Your Final Score: " + score);
 
-        } catch (Exception e) {
-            System.out.println("File error: " + e.getMessage());
-        } finally {
-            console.close();
+      
         }
     }
 }
