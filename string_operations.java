@@ -1,6 +1,8 @@
-package assg4;
 import java.util.Scanner;
+// class to perform operations
 public class string_operations {
+
+	// method to convert to upper case
 	public static String upper(String s){
 		char[] c = s.toCharArray();
 		for(int i=0; i<c.length; i++){
