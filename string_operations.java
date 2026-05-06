@@ -50,6 +50,7 @@ public class string_operations {
 		}
 		return new String(chr);
 	}
+	// method to compare string
 	public static void compare(String s1, String s2) {      
     
     if(s1.length() != s2.length()) {
@@ -78,6 +79,8 @@ public class string_operations {
 		count=count+1;
 		System.out.println("Count is: "+ count);	
 	}
+
+	// method to find substring
 	public static void substring(String s4, String s5) {
     int n1 = s4.length();
     int n2 = s5.length();
@@ -103,7 +106,7 @@ public class string_operations {
         System.out.println("Substring not found");
     }
 }
-	
+	//m method to replace char in string
 	public static String replace(String s, char oldch, char newch) {
     char[] c = s.toCharArray();
     for (int i = 0; i < c.length; i++) {
@@ -114,7 +117,7 @@ public class string_operations {
     }
     return new String(c);
 }
-	
+// main class	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);     
       int choice;
