@@ -13,7 +13,7 @@ public class string_operations {
 			}
 		return new String(c);
 		}
-	
+	// method to convert to lower case
 	public static String lower(String s){
 		char[] c = s.toCharArray();
 		for(int i=0; i<c.length; i++){
@@ -24,6 +24,8 @@ public class string_operations {
 			}
 		return new String(c);
 		}
+
+	// method to extract digits in string
 	public static void extract(String str) {
 		String r="";
 		for(int i=0; i<str.length(); i++) {
@@ -34,7 +36,7 @@ public class string_operations {
 		}
 		System.out.println("Substring as numbers is: "+r);	
 	}
-	
+	// method to reverse string
 	public static String reverse(String st) {
 		char[] chr= st.toCharArray();
 		int i=0;
