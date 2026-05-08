@@ -1,6 +1,6 @@
 import java.util.Scanner;
 // class to perform operations
-public class string_operations {
+class string_operations {
 
 	// method to convert to upper case
 	public static String upper(String s){
@@ -67,7 +67,7 @@ public class string_operations {
     
     System.out.println("Strings are matching!");
 }
-
+// method to count words
 	public static void count(String s3) {
 		int count=0;
 		char[] ch= s3.toCharArray();
@@ -117,7 +117,9 @@ public class string_operations {
     }
     return new String(c);
 }
-// main class	
+}
+// main class
+public class str_op{
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);     
       int choice;
@@ -180,4 +182,5 @@ public class string_operations {
           }
       } while (choice != 9);
       sc.close();
+}
 }
