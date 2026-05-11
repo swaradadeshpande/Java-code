@@ -1,3 +1,6 @@
+// Problem Statement: Design an Online Food Delivery Ecosystem where you can add Packages: restaurants, orders, delivery, users, payments. You should add Base class: User and Derived classes : Customer, DeliveryPartner, RestaurantOwner. Implement Interfaces: OrderProcessable and Trackable. Also add following Features: 1) Order placement & tracking 2) Restaurant menu management 3) Delivery assignment logic
+
+
 // import all packages
 import users.*;
 import orders.*;
