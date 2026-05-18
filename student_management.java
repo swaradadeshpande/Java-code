@@ -3,7 +3,6 @@ import java.util.*;
 
 // main class
 public class student_management {
-
     public static void main(String[] args) {
         Manager m = new Manager();
         Scanner sc = new Scanner(System.in);
@@ -18,7 +17,6 @@ public class student_management {
             System.out.println("5. Delete student");
             System.out.println("6. Save and Exit");
             System.out.print("Choice: ");
-            
             // Check to prevent InputMismatchException if user types a letter
             if (sc.hasNextInt()) {
                 c = sc.nextInt();
@@ -78,37 +76,37 @@ public class student_management {
 
 // student class
 class Student {
+    // data members 
     String name;
     int age;
     String grade;
     
-    public Student(String name, int age, String grade) { // constructor
+    public Student(String name, int age, String grade) { // parameterized constructor
         this.name = name;
         this.age = age;
         this.grade = grade;
     }
-    
+    // overriding method fro Oject class
     @Override
     public String toString() {
         return name + "," + age + "," + grade;
     }
 }
-
 // manager class
 class Manager {
+    // storing record using arraylist data structure
     private ArrayList<Student> studentList = new ArrayList<>();
-    private final String FILE_NAME = "student.txt";
-    
+    private final String FILE_NAME = "student.txt"; // file to store data
     // Constructor automatically loads data on startup
     public Manager() {
         loadFromFile();
     }
-    
+    // method to add student
     public void add_student(Student s) {
         studentList.add(s);
         System.out.println("Student added: " + s.name);
     }
-    
+    //method to display
     public void display() {
         if (studentList.isEmpty()) {
             System.out.println("No records found!");
@@ -132,7 +130,6 @@ class Manager {
             System.out.println("Student not found!");
         }
     }
-    
     // Method to Update/Modify existing student details
     public void modify_student(String name, int newAge, String newGrade) {
         boolean found = false;
