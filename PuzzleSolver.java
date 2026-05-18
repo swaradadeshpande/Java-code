@@ -1,13 +1,13 @@
 import java.util.Scanner;
-
+// class forr operations 
 class PuzzleSolver {
     private int n;
     private int[] arr;
 
-    public void setSize(int num) {   // Set size
+    public void setSize(int num) {   // Set method , for size
         n = num;
     }
-    public void setArray(int[] a) {   // Set array
+    public void setArray(int[] a) {   // Set method for array
         arr = a;
     }
 
@@ -83,7 +83,7 @@ class PuzzleSolver {
             System.out.println("No pairs found!");
     }
 
-   public static void main(String[] args) { // Main
+   public static void main(String[] args) { // Main class
         Scanner sc = new Scanner(System.in);
         PuzzleSolver ps = new PuzzleSolver();
         System.out.println("Array Puzzle Solver!!");
